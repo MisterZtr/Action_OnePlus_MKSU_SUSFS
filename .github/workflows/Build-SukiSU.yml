@@ -1,4 +1,4 @@
-name: Build OnePlus11_Kernel
+name: Build OnePlusNord4_Kernel
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
 env:
   RETENTION_COUNT: 5
   CPU: 'sm7675'
-  FEIL: 'oneplus_nord_4_v.xml'
+  FEIL: 'oneplus_nord_4_v'
   CPUD: 'pineapple'
   ANDROID_VERSION: 'android14'
   KERNEL_VERSION: '6.1'
