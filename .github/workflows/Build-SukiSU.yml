@@ -7,12 +7,12 @@ on:
 
 env:
   RETENTION_COUNT: 5
-  CPU: 'sm8550'
-  FEIL: 'oneplus_11_v'
-  CPUD: 'kalama'
-  ANDROID_VERSION: 'android13'
-  KERNEL_VERSION: '5.15'
-  KERNEL_NAME: '-android13-SukiSU-op11'
+  CPU: 'sm7675'
+  FEIL: 'oneplus_nord_4_v.xml'
+  CPUD: 'pineapple'
+  ANDROID_VERSION: 'android14'
+  KERNEL_VERSION: '6.1'
+  KERNEL_NAME: '-android14-SukiSU-bale'
   KERNELSU_VARIANT: SukiSU-Ultra
   KERNELSU_VERSION: main
   SUSFS_ENABLED: true
@@ -40,8 +40,8 @@ jobs:
 
       - name: Configure Git
         run: |
-         git config --global user.name "RinLoYi"
-         git config --global user.email "1514299108@qq.com"
+         git config --global user.name "MisterZtr"
+         git config --global user.email "andey2004586@gmail.com"
 
       - name: Install dependencies
         run: |
