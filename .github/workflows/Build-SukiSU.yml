@@ -148,10 +148,6 @@ jobs:
           cd kernel_workspace/kernel_platform
           # Add KSU configuration settings
           echo "CONFIG_KSU=y" >> ./common/arch/arm64/configs/gki_defconfig
-          
-          if [[ "${{ env.KERNELSU_VARIANT }}" == "SukiSU-Ultra" ]]; then
-            echo "CONFIG_KPM=y" >> ./common/arch/arm64/configs/gki_defconfig
-          fi
 
           # Add VFS configuration settings
           if [[ "${{ env.VFS_patch_ENABLED }}" == 'enable' ]]; then
@@ -311,12 +307,11 @@ jobs:
           uses: softprops/action-gh-release@v1
           with:
             tag_name: "build-${{ github.run_id }}"
-            name: "OnePlus11_SukiSU Build ${{ github.run_number }}"
+            name: "OnePlusNord4_SukiSU Build ${{ github.run_number }}"
             body: |
-              - 编译时间: ${{ github.event.repository.updated_at }}
-              - 内核版本: ${{ needs.build.outputs.ksuuver }}${{ needs.build.outputs.ksuver }}
-              - 推荐管理器：[SukiSU-Ultra](https://github.com/ShirkNeko/SukiSU-Ultra/releases)
-              - 如果构建的内核版本没变，不必更新！
+              - Compilation time: ${{ github.event.repository.updated_at }}
+              - Ksu Version ${{ needs.build.outputs.ksuuver }}${{ needs.build.outputs.ksuver }}
+              - Manager：[SukiSU-Ultra](https://github.com/ShirkNeko/SukiSU-Ultra/releases)
             draft: false
             prerelease: false
             files: |
