@@ -1,5 +1,8 @@
 name: Build OnePlusNord4_Kernel
 
+on:
+  workflow_dispatch:
+  
 env:
   RETENTION_COUNT: 5
   CPU: 'sm7675'
